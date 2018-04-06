@@ -25,7 +25,8 @@ export default class BasicControlPageTest extends Component {
     init(){
         this.viewOnAccessibilityTap = this.viewOnAccessibilityTap.bind(this);
         this.viewOnMoveShouldSetResponder = this.viewOnMoveShouldSetResponder.bind(this);
-        this.viewOnMoveShouldSetResponderCapture = this.viewOnMoveShouldSetResponderCapture.bind(this);
+        this.viewOnMoveShouldSetResponder = this.viewOnMoveShouldSetResponder.bind(this);
+        this.textOnPress = this.textOnPress.bind(this);
     }
 
     render() {
@@ -49,10 +50,20 @@ export default class BasicControlPageTest extends Component {
 
                 </View>
 
+                <Text style={styles.textPStyle} numberOfLines={1}> hello lvjie
+                    <Text
+                        style={styles.textCStyle}
+                        numberOfLines={1}
+                        onPress={this.textOnPress}
+                    >Hello React Native Hello React Native Hello React Native Hello React Native</Text>
+                </Text>
+
+
             </ScrollView>
         );
     }
 
+    /*     View相关        */
     viewOnAccessibilityTap(){
         ToastAndroid.show('viewOnAccessibilityTap...', ToastAndroid.SHORT);
     }
@@ -66,6 +77,11 @@ export default class BasicControlPageTest extends Component {
         return true;
     }
 
+    /*     Text相关        */
+    textOnPress(){
+        ToastAndroid.show('textOnPress...', ToastAndroid.SHORT);
+    }
+
 
 }
 
@@ -75,5 +91,13 @@ const styles = StyleSheet.create({
         width: 150,
         margin: 20,
         backgroundColor:'#ef5b9c'
+    },
+    textPStyle: {
+        fontFamily: 'Cochin',
+        color:'#432312'
+    },
+    textCStyle:{
+        fontSize: 20,
+        fontWeight: 'bold',
     }
 });
