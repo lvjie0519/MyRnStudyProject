@@ -57,7 +57,15 @@ export default class BasicControlPageTest extends Component {
 
                 </View>
 
-                <Text style={styles.textPStyle} numberOfLines={1}> hello lvjie
+                <Text style={styles.textPStyle} numberOfLines={1}> hello react
+                    <Text
+                        style={styles.textCStyle}
+                        numberOfLines={1}
+                        onPress={this.textOnPress}
+                    >Hello React Native Hello React Native Hello React Native Hello React Native</Text>
+                </Text>
+
+                <Text style={styles.textPStyle}> hello react
                     <Text
                         style={styles.textCStyle}
                         numberOfLines={1}
@@ -176,12 +184,12 @@ const styles = StyleSheet.create({
         backgroundColor:'#ef5b9c'
     },
     textPStyle: {
-        fontFamily: 'Cochin',
         color:'#432312'
     },
     textCStyle:{
         fontSize: 20,
         fontWeight: 'bold',
+        color:'#c34253'
     },
     imageStyle:{
         height:70,
