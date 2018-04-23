@@ -9,6 +9,7 @@ import {
     View,
     Button,
     ToastAndroid,
+    Dimensions,
 } from 'react-native';
 
 export default class MainPage extends Component {
@@ -54,6 +55,7 @@ export default class MainPage extends Component {
     }
 
     goBasicControlTestPage(){
+        ToastAndroid.show("height="+height+"   width="+width, ToastAndroid.SHORT)
         this.props.navigation.navigate('BasicControlTestPage')
     }
 
@@ -67,6 +69,7 @@ export default class MainPage extends Component {
 
 }
 
+var {height, width} = Dimensions.get('window');
 const styles = StyleSheet.create({
     btnStyle: {
         marginTop:10,

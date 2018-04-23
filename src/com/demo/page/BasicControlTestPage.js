@@ -41,6 +41,13 @@ export default class BasicControlPageTest extends Component {
             >
 
                 <View
+                    style={{height: 100, width: 300, margin: 20, backgroundColor:'#fab27b'}}
+                >
+                    <Text style={ {fontSize:16,margin:20}}>尺寸</Text>
+                </View>
+
+
+                <View
                     style={{height: 100, width: 300, margin: 20, backgroundColor:'#2a5caa'}}
                     accessibilityLabel='view 1'
                     onMoveShouldSetResponderCapture = {this.viewOnMoveShouldSetResponderCapture}
