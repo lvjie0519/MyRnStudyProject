@@ -9,6 +9,7 @@ import MainPage from './page/MainPage'
 import BasicControlTestPage from './page/BasicControlTestPage'
 import PropsAndStateTestPage from './page/PropsAndStateTestPage'
 import FlexboxTestPage from './page/FlexboxTestPage'
+import FlatListViewTestPage from './page/FlatListViewTestPage'
 
 const PageManage = StackNavigator({
     MainPage: {
@@ -35,6 +36,13 @@ const PageManage = StackNavigator({
     FlexboxTestPage: {
         screen: FlexboxTestPage,
         navigationOptions:{
+            header:null,
+        },
+        mode:'card',
+    },
+    FlatListViewTestPage: {
+        screen: FlatListViewTestPage,
+            navigationOptions:{
             header:null,
         },
         mode:'card',

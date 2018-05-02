@@ -24,6 +24,7 @@ export default class MainPage extends Component {
         this.goBasicControlTestPage = this.goBasicControlTestPage.bind(this);
         this.goPropsAndStateTestPage = this.goPropsAndStateTestPage.bind(this);
         this.goFlexboxTestPage = this.goFlexboxTestPage.bind(this);
+        this.goFlatListTestPage = this.goFlatListTestPage.bind(this);
     }
 
     render() {
@@ -50,6 +51,13 @@ export default class MainPage extends Component {
                     />
                 </View>
 
+                <View style={styles.btnStyle}>
+                    <Button
+                        onPress={this.goFlatListTestPage}
+                        title="进入FlatList学习页面"
+                    />
+                </View>
+
             </View>
         );
     }
@@ -65,6 +73,10 @@ export default class MainPage extends Component {
 
     goFlexboxTestPage(){
         this.props.navigation.navigate('FlexboxTestPage')
+    }
+
+    goFlatListTestPage(){
+        this.props.navigation.navigate('FlatListViewTestPage')
     }
 
 }
