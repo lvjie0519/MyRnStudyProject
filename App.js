@@ -17,7 +17,10 @@ import PageManage from './src/com/demo/PageManage'
 export default class App extends Component{
   render() {
     return (
-      <PageManage/>
+        <View style={{flex: 1}}>
+          <PageManage/>
+        </View>
+
     );
   }
 }

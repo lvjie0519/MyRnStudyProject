@@ -11,6 +11,7 @@ import PropsAndStateTestPage from './page/PropsAndStateTestPage'
 import FlexboxTestPage from './page/FlexboxTestPage'
 import FlatListViewTestPage from './page/FlatListViewTestPage'
 import VirtualizedListViewTestPage from './page/VirtualizedListViewTestPage'
+import WebViewTestPage from './page/WebViewTestPage'
 
 const PageManage = StackNavigator({
     MainPage: {
@@ -50,6 +51,13 @@ const PageManage = StackNavigator({
     },
     VirtualizedListViewTestPage: {
         screen: VirtualizedListViewTestPage,
+        navigationOptions:{
+            header:null,
+        },
+        mode:'card',
+    },
+    WebViewTestPage: {
+        screen: WebViewTestPage,
         navigationOptions:{
             header:null,
         },

@@ -26,6 +26,7 @@ export default class MainPage extends Component {
         this.goFlexboxTestPage = this.goFlexboxTestPage.bind(this);
         this.goFlatListTestPage = this.goFlatListTestPage.bind(this);
         this.goVirtualizedListViewTestPage = this.goVirtualizedListViewTestPage.bind(this);
+        this.goWebViewTest = this.goWebViewTest.bind(this);
     }
 
     render() {
@@ -66,6 +67,13 @@ export default class MainPage extends Component {
                     />
                 </View>
 
+                <View style={styles.btnStyle}>
+                    <Button
+                        onPress={this.goWebViewTest}
+                        title="进入WebView测试"
+                    />
+                </View>
+
             </View>
         );
     }
@@ -89,6 +97,10 @@ export default class MainPage extends Component {
 
     goVirtualizedListViewTestPage(){
         this.props.navigation.navigate('VirtualizedListViewTestPage')
+    }
+
+    goWebViewTest(){
+        this.props.navigation.navigate('WebViewTestPage')
     }
 
 }
