@@ -25,8 +25,8 @@ export default class MainPage extends Component {
         this.goPropsAndStateTestPage = this.goPropsAndStateTestPage.bind(this);
         this.goFlexboxTestPage = this.goFlexboxTestPage.bind(this);
         this.goFlatListTestPage = this.goFlatListTestPage.bind(this);
-        this.goVirtualizedListViewTestPage = this.goVirtualizedListViewTestPage.bind(this);
         this.goWebViewTest = this.goWebViewTest.bind(this);
+        this.goTagFlowLayoutTestPage = this.goTagFlowLayoutTestPage.bind(this);
     }
 
     render() {
@@ -67,6 +67,13 @@ export default class MainPage extends Component {
                     />
                 </View>
 
+                <View style={styles.btnStyle}>
+                    <Button
+                        onPress={this.goTagFlowLayoutTestPage}
+                        title="进入FlowLayoutTestPage测试"
+                    />
+                </View>
+
             </View>
         );
     }
@@ -88,12 +95,12 @@ export default class MainPage extends Component {
         this.props.navigation.navigate('FlatListViewTestPage')
     }
 
-    goVirtualizedListViewTestPage(){
-        this.props.navigation.navigate('VirtualizedListViewTestPage')
-    }
-
     goWebViewTest(){
         this.props.navigation.navigate('WebViewTestPage')
+    }
+
+    goTagFlowLayoutTestPage(){
+        this.props.navigation.navigate('TagFlowLayoutTestPage')
     }
 
 }

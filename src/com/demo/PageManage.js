@@ -11,6 +11,7 @@ import PropsAndStateTestPage from './page/PropsAndStateTestPage'
 import FlexboxTestPage from './page/FlexboxTestPage'
 import FlatListViewTestPage from './page/FlatListViewTestPage'
 import WebViewTestPage from './page/WebViewTestPage'
+import TagFlowLayoutTestPage from './page/TagFlowLayoutTestPage'
 
 const PageManage = StackNavigator({
     MainPage: {
@@ -50,6 +51,13 @@ const PageManage = StackNavigator({
     },
     WebViewTestPage: {
         screen: WebViewTestPage,
+        navigationOptions:{
+            header:null,
+        },
+        mode:'card',
+    },
+    TagFlowLayoutTestPage: {
+        screen: TagFlowLayoutTestPage,
         navigationOptions:{
             header:null,
         },
