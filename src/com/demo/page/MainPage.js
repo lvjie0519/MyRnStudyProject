@@ -62,13 +62,6 @@ export default class MainPage extends Component {
 
                 <View style={styles.btnStyle}>
                     <Button
-                        onPress={this.goVirtualizedListViewTestPage}
-                        title="进入VirtualizedList学习页面"
-                    />
-                </View>
-
-                <View style={styles.btnStyle}>
-                    <Button
                         onPress={this.goWebViewTest}
                         title="进入WebView测试"
                     />
